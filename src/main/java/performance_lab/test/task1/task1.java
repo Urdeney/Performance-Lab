@@ -57,11 +57,11 @@ public class task1 {
     static List<Integer> CircleArrayPath(List<Integer> arg_lst) {
 
         if (arg_lst.get(0) == 1) {
-            return new ArrayList<>(List.of(1));
+            return new ArrayList<Integer>(Arrays.asList(1));
         }
 
         if (arg_lst.get(1) % arg_lst.get(0) == 1) {
-            return new ArrayList<>(List.of(1));
+            return new ArrayList<>(Arrays.asList(1));
         }
 
         int[] circle_arr = IntStream.range(1, arg_lst.get(0) + 1).toArray();
@@ -79,7 +79,7 @@ public class task1 {
                 flag = true;
             }
         }
-        path.removeLast();
+        path.remove(path.size()-1);
 
         return path;
     }
@@ -91,7 +91,7 @@ public class task1 {
      */
     static String Concat(List<Integer> path) {
         StringBuilder res_str = new StringBuilder();
-        for (var i : path) {
+        for (Integer i : path) {
             res_str.append(i);
         }
         return res_str.toString();

@@ -77,9 +77,9 @@ public class task4 {
             paths.add((int) mean);
         }
 
-        for (var path : paths) {
+        for (Integer path : paths) {
             int path_value = 0;
-            for (var num : numbers) {
+            for (Integer num : numbers) {
                 path_value += Math.abs(num - path);
             }
             paths_values.add(path_value);

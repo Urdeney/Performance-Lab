@@ -29,15 +29,26 @@ public class task2 {
      * Первый параметр - координаты точки по оси OX
      * Второй параметр - координаты точки по оси OY
      */
-    public record Point(double x, double y) {
+    public static class Point {
+        double x; double y;
+        public Point(double x, double y) {
+            this.x=x;
+            this.y=y;
+        }
     }
 
     /*
      * Первый параметр - точка с координатами x и y
      * Второй параметр - радиус окружности
      */
-    record Cirle(Point p, int radius) {
+    public static class Cirle {
+        Point p; 
+        int radius;
 
+        public Cirle (Point p,int radius) {
+            this.p=p;
+            this.radius = radius;
+        }
         /*
          * 0 - точка лежит на окружности
          * 1 - точка внутри
